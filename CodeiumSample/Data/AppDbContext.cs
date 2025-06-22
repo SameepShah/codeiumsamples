@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using CodeiumSampleApi.Models;
+using CodeiumSample.Models;
 
-namespace CodeiumSampleApi.Data
+namespace CodeiumSample.Data
 {
     public class AppDbContext : DbContext
     {

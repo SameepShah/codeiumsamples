@@ -1,5 +1,5 @@
-using CodeiumSampleApi.Data;
-using CodeiumSampleApi.Models;
+using CodeiumSample.Data;
+using CodeiumSample.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
-namespace CodeiumSampleApi.Controllers
+namespace CodeiumSample.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

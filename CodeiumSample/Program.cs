@@ -1,4 +1,4 @@
-using CodeiumSampleApi.Data;
+using CodeiumSample.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -33,15 +33,15 @@ using (var scope = app.Services.CreateScope())
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     if (!db.Categories.Any())
     {
-        var cat1 = new CodeiumSampleApi.Models.Category { Id = 1, Name = "Electronics" };
-        var cat2 = new CodeiumSampleApi.Models.Category { Id = 2, Name = "Books" };
+        var cat1 = new CodeiumSample.Models.Category { Id = 1, Name = "Electronics" };
+        var cat2 = new CodeiumSample.Models.Category { Id = 2, Name = "Books" };
         db.Categories.AddRange(cat1, cat2);
         db.SaveChanges();
 
         db.Products.AddRange(
-            new CodeiumSampleApi.Models.Product { Name = "Laptop", Price = 1200, CategoryId = cat1.Id },
-            new CodeiumSampleApi.Models.Product { Name = "Smartphone", Price = 800, CategoryId = cat1.Id },
-            new CodeiumSampleApi.Models.Product { Name = "Novel", Price = 20, CategoryId = cat2.Id }
+            new CodeiumSample.Models.Product { Name = "Laptop", Price = 1200, CategoryId = cat1.Id },
+            new CodeiumSample.Models.Product { Name = "Smartphone", Price = 800, CategoryId = cat1.Id },
+            new CodeiumSample.Models.Product { Name = "Novel", Price = 20, CategoryId = cat2.Id }
         );
         db.SaveChanges();
     }

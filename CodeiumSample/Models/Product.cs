@@ -1,4 +1,4 @@
-namespace CodeiumSampleApi.Models
+namespace CodeiumSample.Models
 {
     public class Product
     {
